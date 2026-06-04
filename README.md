@@ -1,10 +1,16 @@
-# Quantyra CR - Web Clara Premium
+# Quantyra CR - Web Premium V2
 
-Versión con diseño claro, minimalista y profesional.
+Versión pulida con estética clara, premium y tecnológica.
 
 Archivos incluidos:
 - index.html
 - style.css
 - script.js
+- logo-q.svg
+- favicon.svg
 
-Subir estos archivos a la raíz del repositorio para GitHub Pages.
+Para actualizar GitHub Pages:
+1. Extraer el ZIP.
+2. Subir estos archivos al repositorio.
+3. Reemplazar los archivos anteriores.
+4. Commit changes.
