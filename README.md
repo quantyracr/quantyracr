@@ -1,16 +1,9 @@
-# Quantyra CR - Web Premium V2
+# Quantyra CR - Premium V3 Corregida
 
-Versión pulida con estética clara, premium y tecnológica.
-
-Archivos incluidos:
-- index.html
-- style.css
-- script.js
-- logo-q.svg
-- favicon.svg
-
-Para actualizar GitHub Pages:
-1. Extraer el ZIP.
-2. Subir estos archivos al repositorio.
-3. Reemplazar los archivos anteriores.
-4. Commit changes.
+Correcciones principales:
+- Header más compacto.
+- Hero responsive sin elementos montados.
+- Logo más pequeño en móvil.
+- Botones separados correctamente.
+- Etiquetas sin pegarse debajo de los botones.
+- Tarjeta principal sin texto tapado.
