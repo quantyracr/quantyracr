@@ -4,28 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Quantyra CR | Servicios tecnológicos premium</title>
-  <meta name="description" content="Quantyra CR ofrece soluciones tecnológicas: desarrollo web, automatización, bases de datos, formularios digitales y gestión de información." />
-  <meta name="keywords" content="Quantyra CR, tecnología Costa Rica, desarrollo web, automatización, bases de datos, formularios digitales, servicios tecnológicos" />
-  <meta name="author" content="Quantyra CR" />
-
-  <meta property="og:title" content="Quantyra CR | Tecnología clara, precisa y funcional" />
-  <meta property="og:description" content="Soluciones digitales para ordenar información, automatizar procesos y construir herramientas tecnológicas profesionales." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://quantyracr.com" />
+  <title>Quantyra CR | Diseño y desarrollo web</title>
+  <meta name="description" content="Quantyra CR ofrece diseño y desarrollo web, formularios digitales, automatización, bases de datos y soluciones tecnológicas para negocios y proyectos." />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="ambient"></div>
+  <div class="page-bg"></div>
 
-  <header class="site-header" id="header">
+  <header class="header">
     <a class="brand" href="#inicio" aria-label="Quantyra CR">
-      <img src="logo-q.svg" alt="Quantyra Q" class="brand-logo">
-      <span class="brand-name">QUANTYRA</span>
+      <img src="logo-q.svg" alt="Logo Quantyra">
+      <span>QUANTYRA</span>
     </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+    </button>
 
     <nav class="nav" id="nav">
       <a href="#servicios">Servicios</a>
@@ -33,169 +31,143 @@
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
-
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
-      <span></span><span></span>
-    </button>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="hero-copy reveal">
+      <div class="hero-text-block reveal">
         <p class="eyebrow">Quantyra CR</p>
-        <h1>Servicios tecnológicos con orden, precisión y diseño.</h1>
-        <p class="hero-text">
-          Creamos soluciones digitales limpias y funcionales para negocios, profesionales y proyectos que necesitan
-          organizar información, mejorar procesos y proyectar una imagen más sólida.
+        <h1>Diseño y desarrollo web con enfoque profesional.</h1>
+        <p class="lead">
+          Creamos sitios web modernos, formularios digitales y soluciones tecnológicas claras para negocios,
+          profesionales y proyectos que necesitan verse bien y funcionar mejor.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="#contacto">Solicitar una propuesta</a>
-          <a class="btn secondary" href="#servicios">Explorar servicios</a>
+        <div class="actions">
+          <a href="#contacto" class="btn btn-primary">Solicitar propuesta</a>
+          <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
         </div>
 
-        <div class="trust-row" aria-label="Puntos clave">
-          <span>Diseño claro</span>
-          <span>Datos organizados</span>
-          <span>Procesos simples</span>
+        <div class="badges">
+          <span>Diseño limpio</span>
+          <span>Responsive</span>
+          <span>Soluciones prácticas</span>
         </div>
       </div>
 
-      <div class="hero-card reveal">
-        <div class="window-bar">
-          <span></span><span></span><span></span>
-        </div>
-
-        <div class="hero-card-content">
-          <img src="logo-q.svg" alt="Logo Quantyra" class="hero-logo">
-          <div>
-            <h2>Digital systems, made simple.</h2>
-            <p>Herramientas, sitios web y estructuras digitales creadas para funcionar con claridad.</p>
-          </div>
-        </div>
-
-        <div class="hero-tags">
-          <span>Automation</span>
-          <span>Web</span>
-          <span>Data</span>
-          <span>Forms</span>
-        </div>
+      <div class="hero-panel reveal">
+        <img src="logo-q.svg" alt="Logo Quantyra" class="panel-logo">
+        <h2>Web, datos y automatización.</h2>
+        <p>
+          Herramientas digitales simples, ordenadas y pensadas para mejorar la forma en que una empresa presenta,
+          recopila y utiliza su información.
+        </p>
       </div>
     </section>
 
-    <section class="section compact">
+    <section class="statement-section">
       <div class="statement reveal">
         <p>
-          Quantyra convierte ideas y necesidades operativas en soluciones digitales elegantes,
-          entendibles y listas para crecer.
+          Una buena solución tecnológica no solo debe verse profesional:
+          también debe ser clara, estable y fácil de usar.
         </p>
       </div>
     </section>
 
     <section class="section" id="servicios">
-      <div class="section-head reveal">
+      <div class="section-title reveal">
         <p class="eyebrow">Servicios</p>
-        <h2>Tecnología útil, presentada con una experiencia premium.</h2>
+        <h2>Soluciones digitales para ordenar, presentar y mejorar procesos.</h2>
       </div>
 
-      <div class="services-grid">
-        <article class="service-card reveal">
-          <div class="icon">⌘</div>
-          <span>01</span>
-          <h3>Desarrollo Web</h3>
-          <p>Sitios modernos, rápidos y responsivos para presentar marcas, servicios o proyectos con una imagen profesional.</p>
+      <div class="grid">
+        <article class="card reveal">
+          <span class="number">01</span>
+          <h3>Diseño y desarrollo web</h3>
+          <p>Sitios modernos, rápidos y adaptados a celular para presentar marcas, servicios o proyectos.</p>
         </article>
 
-        <article class="service-card reveal">
-          <div class="icon">▦</div>
-          <span>02</span>
-          <h3>Formularios Digitales</h3>
-          <p>Formularios claros, editables y bien estructurados para recopilar solicitudes, datos y registros importantes.</p>
+        <article class="card reveal">
+          <span class="number">02</span>
+          <h3>Formularios digitales</h3>
+          <p>Formularios claros para solicitudes, registros, cotizaciones y recolección de información.</p>
         </article>
 
-        <article class="service-card reveal">
-          <div class="icon">◈</div>
-          <span>03</span>
-          <h3>Bases de Datos</h3>
-          <p>Organización de información en estructuras más seguras, consultables y preparadas para crecer con el proyecto.</p>
+        <article class="card reveal">
+          <span class="number">03</span>
+          <h3>Bases de datos</h3>
+          <p>Estructuras organizadas para guardar, consultar y administrar información importante.</p>
         </article>
 
-        <article class="service-card reveal">
-          <div class="icon">↯</div>
-          <span>04</span>
+        <article class="card reveal">
+          <span class="number">04</span>
           <h3>Automatización</h3>
-          <p>Reducción de tareas repetitivas mediante flujos simples, herramientas digitales y procesos más ordenados.</p>
+          <p>Procesos más simples para reducir tareas repetitivas y mejorar el flujo de trabajo.</p>
         </article>
 
-        <article class="service-card reveal">
-          <div class="icon">◎</div>
-          <span>05</span>
-          <h3>Gestión de Información</h3>
-          <p>Clasificación, limpieza y estructuración de datos para que la información sea más fácil de entender y utilizar.</p>
+        <article class="card reveal">
+          <span class="number">05</span>
+          <h3>Gestión de información</h3>
+          <p>Organización de datos, registros e inventarios para convertirlos en información útil.</p>
         </article>
 
-        <article class="service-card reveal">
-          <div class="icon">✦</div>
-          <span>06</span>
-          <h3>Soluciones a Medida</h3>
-          <p>Acompañamiento técnico para crear soluciones digitales acordes con necesidades reales, sin exceso ni complicación.</p>
+        <article class="card reveal">
+          <span class="number">06</span>
+          <h3>Soluciones a medida</h3>
+          <p>Acompañamiento técnico para convertir una necesidad real en una herramienta digital funcional.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="metodo">
-      <div class="method-panel reveal">
-        <div class="method-title">
+      <div class="method reveal">
+        <div>
           <p class="eyebrow">Método Quantyra</p>
-          <h2>Un proceso simple para construir con claridad.</h2>
+          <h2>Primero ordenamos. Luego construimos.</h2>
         </div>
 
         <div class="steps">
           <div class="step">
             <strong>01</strong>
             <h3>Entender</h3>
-            <p>Revisamos la necesidad, el objetivo y la información disponible.</p>
+            <p>Revisamos la necesidad, el objetivo y el tipo de solución requerida.</p>
           </div>
           <div class="step">
             <strong>02</strong>
             <h3>Estructurar</h3>
-            <p>Ordenamos la solución antes de construirla para evitar improvisaciones.</p>
+            <p>Definimos contenido, flujo, datos y funcionalidades antes de diseñar.</p>
           </div>
           <div class="step">
             <strong>03</strong>
-            <h3>Crear</h3>
-            <p>Diseñamos e implementamos una herramienta funcional y visualmente limpia.</p>
+            <h3>Construir</h3>
+            <p>Desarrollamos una solución limpia, responsive y lista para usarse.</p>
           </div>
           <div class="step">
             <strong>04</strong>
             <h3>Mejorar</h3>
-            <p>Pulimos detalles, validamos uso real y dejamos una base lista para evolucionar.</p>
+            <p>Revisamos detalles, corregimos problemas y dejamos una base estable.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="nosotros">
-      <div class="about-grid">
-        <div class="about-copy reveal">
+      <div class="about">
+        <div class="about-text reveal">
           <p class="eyebrow">Sobre Quantyra</p>
-          <h2>Una marca tecnológica enfocada en estructura, precisión y experiencia.</h2>
+          <h2>Tecnología clara, diseño sobrio y soluciones que se entienden.</h2>
           <p>
-            Quantyra nace para crear soluciones digitales que se sientan claras desde el primer uso.
-            La meta es combinar estética, orden técnico y utilidad real en cada proyecto.
-          </p>
-          <p>
-            Nuestro enfoque no es complicar la tecnología, sino convertirla en una herramienta práctica,
-            elegante y fácil de implementar.
+            Quantyra nace para crear herramientas digitales funcionales, ordenadas y bien presentadas.
+            Nuestro enfoque es convertir ideas, datos y procesos en soluciones simples, estables y profesionales.
           </p>
         </div>
 
-        <div class="value-card reveal">
+        <div class="principles reveal">
           <h3>Principios</h3>
           <ul>
             <li>Claridad antes que complejidad.</li>
-            <li>Diseño limpio y funcional.</li>
-            <li>Información ordenada y útil.</li>
+            <li>Diseño limpio y usable.</li>
+            <li>Información ordenada.</li>
             <li>Soluciones pensadas para crecer.</li>
           </ul>
         </div>
@@ -203,25 +175,25 @@
     </section>
 
     <section class="section" id="contacto">
-      <div class="contact-card reveal">
+      <div class="contact reveal">
         <p class="eyebrow">Contacto</p>
-        <h2>Construyamos una solución digital con identidad propia.</h2>
+        <h2>Hablemos de tu próximo proyecto.</h2>
         <p>
-          Comparte tu idea, necesidad o proceso actual. Quantyra puede ayudarte a convertirlo en una herramienta
-          clara, profesional y lista para usarse.
+          Comparte tu idea o necesidad actual. Quantyra puede ayudarte a convertirla en una solución digital clara,
+          profesional y lista para usarse.
         </p>
 
-        <div class="contact-actions">
-          <a class="btn primary" href="mailto:info@quantyracr.com">info@quantyracr.com</a>
-          <a class="btn secondary" href="https://quantyracr.com" target="_blank" rel="noopener">quantyracr.com</a>
+        <div class="actions center">
+          <a href="mailto:info@quantyracr.com" class="btn btn-primary">info@quantyracr.com</a>
+          <a href="https://quantyracr.com" class="btn btn-secondary" target="_blank" rel="noopener">quantyracr.com</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="footer-brand" href="#inicio">
-      <img src="logo-q.svg" alt="Quantyra Q">
+  <footer class="footer">
+    <a href="#inicio" class="footer-brand">
+      <img src="logo-q.svg" alt="Quantyra">
       <span>QUANTYRA</span>
     </a>
     <span>© 2026 Quantyra CR</span>
