@@ -4,202 +4,272 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Quantyra CR | Diseño y desarrollo web</title>
-  <meta name="description" content="Quantyra CR ofrece diseño y desarrollo web, formularios digitales, automatización, bases de datos y soluciones tecnológicas para negocios y proyectos." />
+  <title>Quantyra CR | Mantenimiento</title>
+  <meta name="description" content="Quantyra CR se encuentra temporalmente en mantenimiento." />
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: rgba(15, 23, 42, 0.10);
+      --cyan: #05c8f0;
+      --blue: #2563eb;
+      --purple: #6d35f2;
+      --white: rgba(255, 255, 255, 0.86);
+      --shadow: 0 24px 70px rgba(15, 23, 42, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background:
+        radial-gradient(circle at 18% 16%, rgba(5, 200, 240, 0.16), transparent 30%),
+        radial-gradient(circle at 84% 18%, rgba(37, 99, 235, 0.13), transparent 32%),
+        radial-gradient(circle at 68% 82%, rgba(109, 53, 242, 0.10), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, #f7f9fc 55%, #eef4fb 100%);
+    }
+
+    .background::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px);
+      background-size: 58px 58px;
+      mask-image: linear-gradient(to bottom, black, transparent 92%);
+    }
+
+    .rocket {
+      position: fixed;
+      left: -120px;
+      bottom: 12vh;
+      z-index: -1;
+      font-size: clamp(34px, 5vw, 58px);
+      animation: rocketMove 7.5s ease-in-out infinite;
+      filter: drop-shadow(0 12px 22px rgba(37, 99, 235, 0.26));
+    }
+
+    .rocket::before {
+      content: "🚀";
+      display: block;
+      transform: rotate(45deg);
+    }
+
+    .rocket::after {
+      content: "";
+      position: absolute;
+      width: clamp(90px, 12vw, 170px);
+      height: 10px;
+      right: 70%;
+      top: 60%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, rgba(5, 200, 240, 0.58), rgba(109, 53, 242, 0.22));
+      filter: blur(2px);
+      transform: rotate(45deg);
+      transform-origin: right center;
+    }
+
+    .card {
+      width: min(760px, 100%);
+      max-height: calc(100vh - 48px);
+      max-height: calc(100dvh - 48px);
+      padding: clamp(28px, 5vw, 56px);
+      border: 1px solid var(--line);
+      border-radius: clamp(28px, 5vw, 42px);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: clamp(26px, 5vw, 42px);
+      font-weight: 900;
+      letter-spacing: 0.17em;
+      font-size: 0.95rem;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-weight: 950;
+      letter-spacing: 0;
+      background: linear-gradient(135deg, var(--cyan), var(--blue), var(--purple));
+      box-shadow: 0 14px 34px rgba(37, 99, 235, 0.22);
+    }
+
+    .messages {
+      display: grid;
+      gap: 14px;
+    }
+
+    .message {
+      padding: clamp(16px, 3vw, 22px);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+      text-align: left;
+    }
+
+    .lang {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .text {
+      display: block;
+      color: var(--text);
+      font-size: clamp(1.05rem, 2.2vw, 1.32rem);
+      line-height: 1.45;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    @keyframes rocketMove {
+      0% {
+        transform: translate(-10vw, 8vh) rotate(-8deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      50% {
+        transform: translate(55vw, -48vh) rotate(4deg);
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(120vw, -86vh) rotate(8deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 14px;
+      }
+
+      .card {
+        max-height: calc(100vh - 28px);
+        max-height: calc(100dvh - 28px);
+        padding: 26px;
+      }
+
+      .brand {
+        margin-bottom: 24px;
+        font-size: 0.84rem;
+        letter-spacing: 0.14em;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .messages {
+        gap: 10px;
+      }
+
+      .message {
+        border-radius: 18px;
+        padding: 15px;
+      }
+
+      .text {
+        font-size: 1rem;
+        line-height: 1.38;
+      }
+
+      .rocket {
+        font-size: 34px;
+        animation-duration: 6.5s;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rocket {
+        animation: none;
+        left: auto;
+        right: 24px;
+        bottom: 24px;
+        opacity: 0.26;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="page-bg"></div>
+  <div class="background"></div>
+  <div class="rocket" aria-hidden="true"></div>
 
-  <header class="header">
-    <a class="brand" href="#inicio" aria-label="Quantyra CR">
-      <img src="logo-q.svg" alt="Logo Quantyra">
+  <main class="card" aria-label="Página en mantenimiento">
+    <div class="brand">
+      <div class="brand-mark">Q</div>
       <span>QUANTYRA</span>
-    </a>
+    </div>
 
-    <button class="menu-button" id="menuButton" aria-label="Abrir menú">
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="nav" id="nav">
-      <a href="#servicios">Servicios</a>
-      <a href="#metodo">Método</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-text-block reveal">
-        <p class="eyebrow">Quantyra CR</p>
-        <h1>Diseño y desarrollo web con enfoque profesional.</h1>
-        <p class="lead">
-          Creamos sitios web modernos, formularios digitales y soluciones tecnológicas claras para negocios,
-          profesionales y proyectos que necesitan verse bien y funcionar mejor.
-        </p>
-
-        <div class="actions">
-          <a href="#contacto" class="btn btn-primary">Solicitar propuesta</a>
-          <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
-        </div>
-
-        <div class="badges">
-          <span>Diseño limpio</span>
-          <span>Responsive</span>
-          <span>Soluciones prácticas</span>
-        </div>
+    <section class="messages">
+      <div class="message">
+        <span class="lang">Español</span>
+        <span class="text">La página está en mantenimiento. Volveremos pronto.</span>
       </div>
 
-      <div class="hero-panel reveal">
-        <img src="logo-q.svg" alt="Logo Quantyra" class="panel-logo">
-        <h2>Web, datos y automatización.</h2>
-        <p>
-          Herramientas digitales simples, ordenadas y pensadas para mejorar la forma en que una empresa presenta,
-          recopila y utiliza su información.
-        </p>
-      </div>
-    </section>
-
-    <section class="statement-section">
-      <div class="statement reveal">
-        <p>
-          Una buena solución tecnológica no solo debe verse profesional:
-          también debe ser clara, estable y fácil de usar.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="servicios">
-      <div class="section-title reveal">
-        <p class="eyebrow">Servicios</p>
-        <h2>Soluciones digitales para ordenar, presentar y mejorar procesos.</h2>
+      <div class="message">
+        <span class="lang">English</span>
+        <span class="text">This page is under maintenance. We will be back soon.</span>
       </div>
 
-      <div class="grid">
-        <article class="card reveal">
-          <span class="number">01</span>
-          <h3>Diseño y desarrollo web</h3>
-          <p>Sitios modernos, rápidos y adaptados a celular para presentar marcas, servicios o proyectos.</p>
-        </article>
-
-        <article class="card reveal">
-          <span class="number">02</span>
-          <h3>Formularios digitales</h3>
-          <p>Formularios claros para solicitudes, registros, cotizaciones y recolección de información.</p>
-        </article>
-
-        <article class="card reveal">
-          <span class="number">03</span>
-          <h3>Bases de datos</h3>
-          <p>Estructuras organizadas para guardar, consultar y administrar información importante.</p>
-        </article>
-
-        <article class="card reveal">
-          <span class="number">04</span>
-          <h3>Automatización</h3>
-          <p>Procesos más simples para reducir tareas repetitivas y mejorar el flujo de trabajo.</p>
-        </article>
-
-        <article class="card reveal">
-          <span class="number">05</span>
-          <h3>Gestión de información</h3>
-          <p>Organización de datos, registros e inventarios para convertirlos en información útil.</p>
-        </article>
-
-        <article class="card reveal">
-          <span class="number">06</span>
-          <h3>Soluciones a medida</h3>
-          <p>Acompañamiento técnico para convertir una necesidad real en una herramienta digital funcional.</p>
-        </article>
+      <div class="message">
+        <span class="lang">日本語</span>
+        <span class="text">このページはメンテナンス中です。まもなく再開します。</span>
       </div>
-    </section>
 
-    <section class="section" id="metodo">
-      <div class="method reveal">
-        <div>
-          <p class="eyebrow">Método Quantyra</p>
-          <h2>Primero ordenamos. Luego construimos.</h2>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <strong>01</strong>
-            <h3>Entender</h3>
-            <p>Revisamos la necesidad, el objetivo y el tipo de solución requerida.</p>
-          </div>
-          <div class="step">
-            <strong>02</strong>
-            <h3>Estructurar</h3>
-            <p>Definimos contenido, flujo, datos y funcionalidades antes de diseñar.</p>
-          </div>
-          <div class="step">
-            <strong>03</strong>
-            <h3>Construir</h3>
-            <p>Desarrollamos una solución limpia, responsive y lista para usarse.</p>
-          </div>
-          <div class="step">
-            <strong>04</strong>
-            <h3>Mejorar</h3>
-            <p>Revisamos detalles, corregimos problemas y dejamos una base estable.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="nosotros">
-      <div class="about">
-        <div class="about-text reveal">
-          <p class="eyebrow">Sobre Quantyra</p>
-          <h2>Tecnología clara, diseño sobrio y soluciones que se entienden.</h2>
-          <p>
-            Quantyra nace para crear herramientas digitales funcionales, ordenadas y bien presentadas.
-            Nuestro enfoque es convertir ideas, datos y procesos en soluciones simples, estables y profesionales.
-          </p>
-        </div>
-
-        <div class="principles reveal">
-          <h3>Principios</h3>
-          <ul>
-            <li>Claridad antes que complejidad.</li>
-            <li>Diseño limpio y usable.</li>
-            <li>Información ordenada.</li>
-            <li>Soluciones pensadas para crecer.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contacto">
-      <div class="contact reveal">
-        <p class="eyebrow">Contacto</p>
-        <h2>Hablemos de tu próximo proyecto.</h2>
-        <p>
-          Comparte tu idea o necesidad actual. Quantyra puede ayudarte a convertirla en una solución digital clara,
-          profesional y lista para usarse.
-        </p>
-
-        <div class="actions center">
-          <a href="mailto:info@quantyracr.com" class="btn btn-primary">info@quantyracr.com</a>
-          <a href="https://quantyracr.com" class="btn btn-secondary" target="_blank" rel="noopener">quantyracr.com</a>
-        </div>
+      <div class="message">
+        <span class="lang">Deutsch</span>
+        <span class="text">Diese Seite wird derzeit gewartet. Wir sind bald wieder da.</span>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <a href="#inicio" class="footer-brand">
-      <img src="logo-q.svg" alt="Quantyra">
-      <span>QUANTYRA</span>
-    </a>
-    <span>© 2026 Quantyra CR</span>
-    <span>DATA. INSIGHT. PRECISION. GROWTH.</span>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
